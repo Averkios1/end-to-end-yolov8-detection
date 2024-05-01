@@ -1,4 +1,4 @@
-from EmergencyDetection.logger import logging
+from EmergencyDetection.pipeline.training_pipeline import TrainPipeline
 
-logging.info("Welcome to my custom log")
-
+obj = TrainPipeline()
+obj.run_pipeline()
