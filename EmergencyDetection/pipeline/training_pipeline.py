@@ -2,7 +2,7 @@ import sys, os
 from EmergencyDetection.logger import logging
 from EmergencyDetection.exception import AppException
 from EmergencyDetection.components.data_ingestion import DataIngestion
-#from EmergencyDetection.components.data_validation import DataValidation
+from EmergencyDetection.components.data_validation import DataValidation
 #from EmergencyDetection.components.model_trainer import ModelTrainer
 
 from EmergencyDetection.entity.config_entity import (DataIngestionConfig,
@@ -85,9 +85,9 @@ class TrainPipeline:
         try:
             logging.info(f"Entered the try of the run_pipeline method of TrainPipeline class")
             data_ingestion_artifact = self.start_data_ingestion()
-#            data_validation_artifact = self.start_data_validation(
-#               data_ingestion_artifact=data_ingestion_artifact
-#            )
+            data_validation_artifact = self.start_data_validation(
+               data_ingestion_artifact=data_ingestion_artifact
+            )
 
 #            if data_validation_artifact.validation_status  == True:
 #                model_trainer_artifact = self.start_model_trainer()

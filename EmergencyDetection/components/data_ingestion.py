@@ -81,8 +81,9 @@ class DataIngestion:
                 zip_ref.extractall(feature_store_path)
             logging.info(f"Extracting zip file: {zip_file_path} into dir: {feature_store_path}")
             '''
+            logging.info(f"Zip file is: {zip_file_path} feature store path is: {feature_store_path}")
             shutil.copytree(zip_file_path, feature_store_path, dirs_exist_ok=True)
-            shutil.rmtree(zip_file_path)            
+            #shutil.rmtree(zip_file_path)            
             return feature_store_path
 
         except Exception as e:
