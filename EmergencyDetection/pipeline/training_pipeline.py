@@ -3,7 +3,7 @@ from EmergencyDetection.logger import logging
 from EmergencyDetection.exception import AppException
 from EmergencyDetection.components.data_ingestion import DataIngestion
 from EmergencyDetection.components.data_validation import DataValidation
-#from EmergencyDetection.components.model_trainer import ModelTrainer
+from EmergencyDetection.components.model_trainer import ModelTrainer
 
 from EmergencyDetection.entity.config_entity import (DataIngestionConfig,
                                                      DataValidationConfig,
@@ -89,11 +89,11 @@ class TrainPipeline:
                data_ingestion_artifact=data_ingestion_artifact
             )
 
-#            if data_validation_artifact.validation_status  == True:
-#                model_trainer_artifact = self.start_model_trainer()
-#            
-#            else:
-#                raise Exception("Your data is not in correct format")
+            if data_validation_artifact.validation_status  == True:
+                model_trainer_artifact = self.start_model_trainer()
+            
+            else:
+                raise Exception("Your data is not in correct format")
 
         except Exception as e:
             raise AppException(e, sys)

@@ -58,12 +58,12 @@ class DataValidation:
             logging.info(f"Data validation artifact: {data_validation_artifact}")
 
             if status:
-                directory = "foo"
-                path = os.path.join(os.getcwd(), directory)    
-                os.mkdir(path)
-                shutil.copytree(self.data_ingestion_artifact.data_zip_file_path, path, dirs_exist_ok=True)
+            #    directory = "foo"
+            #    path = os.path.join(os.getcwd(), directory)    
+            #    os.mkdir(path)
+                shutil.copytree(self.data_ingestion_artifact.data_zip_file_path, os.getcwd(), dirs_exist_ok=True)
 
-            return data_validation_artifact
+                return data_validation_artifact
 
         except Exception as e:
             raise AppException(e, sys)
