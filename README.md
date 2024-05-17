@@ -22,7 +22,7 @@ https://github.com/vasalosi/end-to-end-yolov8-detection
 ### STEP 01- Create a conda environment after opening the repository
 
 ```bash
-conda create -n waste python=3.8 -y
+conda create -n emergency python=3.8 -y
 ```
 
 ```bash
@@ -81,7 +81,7 @@ open up you local host and port
 
 	
 ## 3. Create ECR repo to store/save docker image
-    - Save the URI: 471112593808.dkr.ecr.eu-north-1.amazonaws.com/emergency
+    - Save the URI: 
 
 	
 ## 4. Create EC2 machine (Ubuntu) 
@@ -133,11 +133,11 @@ open up you local host and port
 
 ## Run from terminal:
 
-docker build -t chickenapp.azurecr.io/chicken:latest .
+docker build -t 
 
-docker login chickenapp.azurecr.io
+docker login 
 
-docker push chickenapp.azurecr.io/chicken:latest
+docker push 
 
 
 ## Deployment Steps:
