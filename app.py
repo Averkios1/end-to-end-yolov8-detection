@@ -68,8 +68,8 @@ def predictRoute():
 @cross_origin()
 def predictLive():
     try:
-        os.system("cd yolov5/ && python detect.py --weights best.pt --img 416 --conf 0.5 --source 0")
-        os.system("rm -rf yolov5/runs")
+        os.system("yolo task=detect mode=predict model=artifacts/model_trainer/best.pt conf=0.25 source=0")
+        os.system("rm -rf runs")
         return "Camera starting!!" 
 
     except ValueError as val:
