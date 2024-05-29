@@ -10,5 +10,5 @@ EXPOSE 8080
 
 RUN apt-get update && apt-get install ffmpeg libsm6 libxext6 unzip -y && pip install -r requirements.txt
 EXPOSE 8080
-CMD ["python3", "app.py", "--host=0.0.0.0", "--port=8000"]
+CMD ["python3", "app.py", "--host=0.0.0.0", "--port=8080"]
 #
