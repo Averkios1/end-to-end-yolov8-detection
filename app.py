@@ -44,7 +44,7 @@ def predictRoute():
         decodeImage(image, clApp.filename)
 
         #os.system("cd yolov5/ && python detect.py --weights ../best.pt --img 416 --conf 0.5 --source ../data/inputImage.jpg")
-        os.system("yolo task=detect mode=predict model=../best.pt conf=0.25 source=data/inputImage.jpg")
+        os.system("yolo task=detect mode=predict model=best.pt conf=0.25 source=data/inputImage.jpg")
         #os.system("cd yolov5/ && python detect.py  --img 416 --conf 0.5 --source ../data/inputImage.jpg")
 
         opencodedbase64 = encodeImageIntoBase64("runs/detect/predict/inputImage.jpg")
